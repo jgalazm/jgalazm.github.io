@@ -8,9 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head
   content must come *after* these tags -->
-  <title> Flume experiment </title>
+  <title> Flume </title>
 
-  <!-- Bootstrap -->	
+  <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -22,26 +22,21 @@
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-  <!-- Numerical model -->
-  <script type="text/javascript"
-  src="https://rawgit.com/jgalazm/waterexp/master/flumeexp/surf.js"></script>
-  <script type="text/javascript"
-  src="https://rawgit.com/jgalazm/waterexp/master/flumeexp/surfsolve.js"></script>
- 
-  <!-- Facebook stuff -->	
+  <!-- Facebook stuff -->
 	<meta property="og:image" content="https://cdn.rawgit.com/jgalazm/jgalazm.github.io/master/images/thumbnail_swe1d.png"/>
-	<meta property="og:title" content="FlumeExp (jgalazm)" />
+	<meta property="og:title" content="Flume (jgalazm)" />
 	<meta property="og:description" content="A horizontal closed flume experiment. Click/touch and drag the water and see what happens." />
 	<meta property="og:url" content="https://jgalazm.github.io/swe1d.html" />
 
-<!--	Dat gui controls-->
+  <!--	Dat gui controls-->
 	<script type="text/javascript" src="js/dat.gui.min.js"></script>
-	
-  <script>
-  $(function() {
-    init();
-  });
-  </script>
+  <link href="css/lighter_dat_gui.css" rel="stylesheet">
+
+  <style>
+  #controls {position: absolute;
+            top: 0px;
+            right: 0px;}
+  </style>
 </head>
 
 <body>
@@ -49,8 +44,10 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-8">
-          <h1>Flume experiment </h1>
-          <p> Click and drag the water with your mouse. </p>
+          <h1>Flume </h1>
+          <p> Click and drag the water with your mouse.<br>
+
+            Use the <a href="#controls"> controls</a> for additional interaction </p>
         </div>
       </div>
     </div>
@@ -67,9 +64,12 @@
     </div>
 
     <div class="row row-content">
-      <div id="simulation" class="col-xs-12">
+      <div id="simulation" class="col-xs-12" style="height: 100vh;">
+        <div id="controls"></div>
         <canvas id="myCanvas" width="100" height="200"></canvas>
       </div>
+
+      <!-- class="col-xs-12 col-sm-2" -->
     </div>
   </div>
 
@@ -90,4 +90,23 @@
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
+
+  <!-- Numerical model -->
+  <!-- <script type="text/javascript"
+  src="https://rawgit.com/jgalazm/waterexp/master/flume/surf.js"></script>
+  <script type="text/javascript"
+  src="https://rawgit.com/jgalazm/waterexp/master/flume/surfsolve.js"></script> -->
+
+<!--  For debugging-->
+  <script type="text/javascript"
+  src="../waterexp/flume/surf.js"></script>
+  <script type="text/javascript"
+  src="../waterexp/flume/surfsolve.js"></script>
+
+  <!-- Initialize  -->
+  <script>
+  $(function() {
+    init();
+  });
+  </script>
 </body>
