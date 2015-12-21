@@ -11,25 +11,25 @@ void main()
     //float a = fract(value);
     float t;
     vec3 pseudoColor;
-    // 
+	// 
     if(value <= colors[0].a){
         pseudoColor = colors[0].rgb;
     }
     else if (value > colors[6].a){
-        pseudoColor = colors[6].rgb;
+    	pseudoColor = colors[6].rgb;
     }
     else{
-        for (int i=1; i<7; i++){
-            vec4 cleft = colors[i-1];
-            vec4 cright = colors[i];
+    	for (int i=1; i<7; i++){
+			vec4 cleft = colors[i-1];
+			vec4 cright = colors[i];
 
-            if (value>cleft.a && value <=cright.a){
-                t = (value - cleft.a)/(cright.a - cleft.a);
-                pseudoColor = mix(cleft.rgb, cright.rgb, t);
-                break;
-            }
-        }           
-    }
+			if (value>cleft.a && value <=cright.a){
+				t = (value - cleft.a)/(cright.a - cleft.a);
+				pseudoColor = mix(cleft.rgb, cright.rgb, t);
+				break;
+			}
+		}			
+	}
 
     gl_FragColor = vec4(pseudoColor.r, pseudoColor.g,pseudoColor.b, 1.0); 
 }
