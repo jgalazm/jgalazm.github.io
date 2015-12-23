@@ -11,6 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/mystyle.css" rel="stylesheet">
+    <link href="css/hovereffect.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,10 +25,8 @@
   </header>
 
   <div class="container">
-    <div class="row">
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-4">
+    <div class="row row-content">
+<!--       <div class="col-xs-12 col-sm-4">
         <a href="flume.html">
           <img src="img/thumbnail_swe1d.png" class="img-thumbnail">
         </a>
@@ -38,7 +37,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row row-content">
       <div class="col-xs-12 col-sm-4">
         <a href="diffuse.html">
           <img src="img/thumbnail_diffuse.png" class="img-thumbnail">
@@ -48,8 +47,30 @@
         <h2> <a href="diffuse.html"> Diffuse </a></h2>
         Diffusion equation.
       </div>
-    </div>    
+    </div>    -->
 
+    <div class="row row-content">
+      <div class="col-xs-12 col-sm-4">
+        <div class="hovereffect">
+            <img class="img-responsive" src="img/thumbnail_swe1d2.png" alt="">
+            <div class="overlay">
+               <h2>Flume</h2>
+               <p> Generate waves in a horizontal flume.</p>
+               <a class="info" href="flume.html">Go</a>
+            </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="hovereffect">
+            <img class="img-responsive" src="img/thumbnail_diffuse.png" alt="">
+            <div class="overlay">
+               <h2>Diffuse</h2>
+               <p> Diffuse heat to a thin metal layer, or ink in still water.</p>
+               <a class="info" href="diffuse.html">Go</a>
+            </div>
+        </div>
+      </div>      
+    </div>   
 <!--       <div class="col-xs-12 col-sm-2">
         <p>
         To come: Second order, well-balanced, 3D representation of 1D model. GPU model.
