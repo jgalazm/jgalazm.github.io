@@ -10,7 +10,12 @@
     border-bottom: 1px ridge;
     min-height:250px;
 }
-
+.row-footer{
+    background-color: #AfAfAf;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+    min-height:250px;
+}
 .hover-descr{
 	color : #d0d0d0;
 }
