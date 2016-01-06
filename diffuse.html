@@ -37,9 +37,8 @@
 			  <div class="row">
 			    <div class="col-xs-12 col-sm-8">
 			      <h1>Diffuse </h1>
-			      <p> Click and add a diffusive ink to your water, or increase the temperature in your metal layer. Anyway, it is the diffusion of a substance in a homogeneous media. Change the colors with the <emph>scene</emph> control.<br>
-
-			        Use the <a href="#controls"> controls</a> for additional interaction </p>
+			      <p> Diffuse ink in still water or heat in a metal layer. Use the <a href="#simulation">controls</a> for better interaction.
+			      </p>
 			    </div>
 			  </div>
 			</div>
@@ -57,16 +56,58 @@
 
 	    <div class="row row-content">
 
-	      <div id="simulation" class="col-xs-9">
+	      <div id="simulation" class="col-xs-12 col-md-9">
 	        <canvas id="container" style="width:1024px;height:512px;border:2px solid #d0d0d0;" ></canvas>
 	      </div>
-	      <div  class="col-xs-3">
+	      <div  class="col-xs-12 col-md-3">
+	      	<h3> Instructions </h3>
+			<p>
+				Use left/right click to add/remove heat from the metal layer. Play with the others controls to switch between ink or heat diffusion, pause, increase the speed of the simulation or just safely take a screenshot of the current canvas. 
+	      	</p>	
+	      	<br>
+	      	<h4> Controls </h4>      	
 	        <div id="controls"></div>	      	
 	      </div>
+
+
 	      <!-- class="col-xs-12 col-sm-2" -->
 	    </div>
 	  </div>
+    
+		<footer>
+			<div class="container">
+			  <div class="row">
+			    <div class="col-xs-12 col-sm-7 col-sm-offset-5" id="copyright">
+			      &copy;2015, jgalazm.
+			      See it on
+			      <a href="https://github.com/jgalazm/waterexp/">
+			         GitHub <i class="fa fa-github"></i>
+			      </a>
+			    </div>
+			  </div>
+			</div>
+		</footer>
+	
 
+
+		<!-- smooth scroll effect -->
+		<script>
+			$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 500);
+			        return false;
+			      }
+			    }
+			  });
+			});
+		</script>
 	</body>
 </html>
 
