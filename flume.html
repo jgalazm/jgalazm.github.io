@@ -10,28 +10,21 @@
   content must come *after* these tags -->
   <title> Flume </title>
 
+  <!-- ==============Third party dependencies  =========================-->
+  <!-- Jquery -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>  
+      
   <!-- Bootstrap -->
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+  <!-- Font-awesome -->
+  <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
 
-  <!-- Style -->
-  <link href="css/mystyle.css" rel="stylesheet">
-
-  <!-- Fontawesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-  <!-- Facebook stuff -->
-	<meta property="og:image" content="https://cdn.rawgit.com/jgalazm/jgalazm.github.io/master/img/thumbnail_swe1d2.png"/>
-	<meta property="og:title" content="Flume (jgalazm)" />
-	<meta property="og:description" content="A horizontal closed flume experiment. Click/touch and drag the water and see what happens." />
-	<meta property="og:url" content="https://jgalazm.github.io/flume.html" />
-
-  <!--	Dat gui controls-->
-	<script type="text/javascript" src="js/dat.gui.min.js"></script>
-  <link href="css/lighter_dat_gui.css" rel="stylesheet">
-
+  <!-- dat-gui -->
+  <script src="bower_components/dat-gui/build/dat.gui.min.js"></script>
+  <link href="css/lighter_dat_gui.css" rel="stylesheet">    
+    
   <!-- g.analytics -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -43,6 +36,16 @@
     ga('send', 'pageview');
 
   </script>
+
+  <!-- Facebook stuff -->
+	<meta property="og:image" content="https://cdn.rawgit.com/jgalazm/jgalazm.github.io/master/img/thumbnail_swe1d2.png"/>
+	<meta property="og:title" content="Flume (jgalazm)" />
+	<meta property="og:description" content="A horizontal closed flume experiment. Click/touch and drag the water and see what happens." />
+	<meta property="og:url" content="https://jgalazm.github.io/flume.html" />
+
+  <!-- Style -->
+  <link href="css/mystyle.css" rel="stylesheet">
+
   <style>
   #controls {position: absolute;
             top: 0px;
@@ -100,8 +103,7 @@
 
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-
+  <link href="bower_components/bootstrap/dist/js/bootstrap.min.js" rel="stylesheet">
   <!-- Numerical model -->
   <script type="text/javascript"
   src="https://rawgit.com/jgalazm/waterexp/master/flume/surf.js"></script>
