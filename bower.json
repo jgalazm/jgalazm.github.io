@@ -1,0 +1,31 @@
+{
+  "name": "jgalazm",
+  "homepage": "https://github.com/jgalazm/jgalazm.github.io",
+  "authors": [
+    "Jose Galaz Mora"
+  ],
+  "description": "Personal website",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "jose",
+    "galaz",
+    "mora",
+    "numerical",
+    "models",
+    "interactive"
+  ],
+  "license": "BSD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0"
+  }
+}
