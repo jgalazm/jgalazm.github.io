@@ -27,6 +27,8 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "font-awesome": "^4.5.0",
-    "angular": "angularjs#^1.5.0"
+    "angular": "angularjs#^1.5.0",
+    "three.js": "^0.74.0",
+    "dat-gui": "^0.5.1"
   }
 }

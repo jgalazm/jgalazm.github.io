@@ -1,102 +1,245 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en" ng-app="jgalazmApp">
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>José Galaz Mora </title>
 
-      <!-- Bootstrap -->
-      <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-      <link href="css/mystyle.css" rel="stylesheet">
-      <link href="css/hovereffect.css" rel="stylesheet">
-      <!-- Font-awesome -->
-      <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" >    
-  </head>
+<head>
 
-  <body>
-    <header class="jumbotron">
-      <div class="container">
-        <div class="col-xs-12 col-sm-8">
-          <h1>José Galaz Mora</h1>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>jdgalaz - José Galaz Mora</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/hovereffect.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">José Galaz Mora</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+<!--                     <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-      </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive img-circle" src="img/profile.jpg" alt="">
+                    <div class="intro-text">
+                        <span class="name">José Galaz Mora</span>
+                        <p class="col-sm-6 col-sm-push-3 page-scroll"> My personal website where I plan to put some share-able work I think you may like, and some other information about my activities. For now, please check the <a href="#portfolio"> Portfolio </a> section, or scroll to the bottom if you want to know <a href="#about"> about me </a> </p>
+                        <!-- <hr class="star-light">
+                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <div class="container" ng-controller="myprojectsController as prjCtrl">
-  
-      <div class="row row-content"           
-          ng-repeat="project in prjCtrl.projects">
-        <div class="col-xs-12 col-sm-4">
-          <a href={{project.home}}>
-          <div class="hovereffect">
-              <img class="img-responsive" ng-src={{project.thumbnail}} alt{{project.name}}>
-              <div class="overlay">
-                 <h2>{{project.name}}</h2>    
-                 <a class="info" href={{project.home}}>Go</a>            
-              </div>
-          </div>
-        </a>
-        </div>
-        <div class="col-xs-12 col-sm-8">
-          <h2> <a href={{project.home}}> {{project.name}} </a></h2>
-            <p> {{project.description}}</p>
-        </div>
-      </div>
-      
-    </div>
-
-    <footer class="row-footer">
-      <div class="container">
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
         <div class="row">
-          <div class="col-xs-12 col-sm-7 col-sm-offset-5" id="copyright">
-            
-            <p> &copy;2015, jgalazm. See me on 
-            <a href="https://github.com/jgalazm/waterexp/">
-               GitHub <i class="fa fa-github"></i>
+            <div class="col-sm-6 col-sm-push-3 text-center">
+                <h2>Portfolio</h2>                
+                <p> Some interactive web applications I have developed and wanted to share. These are mathematicals models turned into games, or at least that is what I aimed for. Hope you enjoy them, and have a good time while clicking here and there in the simulations.</p>
+                <hr class="star-primary">
+            </div>
+        </div>        
+        <div class="container" ng-controller="myprojectsController as prjCtrl">   
+          <div class="row portfolio-item"           
+              ng-repeat="project in prjCtrl.projects">
+            <div class="col-xs-8 col-sm-4">
+              <a href={{project.home}}>
+              <div class="hovereffect">
+                  <img class="img-responsive" ng-src={{project.thumbnail}} alt{{project.name}}>
+                  <div class="overlay">
+                     <h2>{{project.name}}</h2>    
+                     <a class="info" href={{project.home}}>Go</a>            
+                  </div>
+              </div>
             </a>
-            </p>
-          </div>
+            </div>
+            <div class="col-xs-12 col-sm-8">
+              <h3> <a href={{project.home}}> {{project.name}} </a></h3>
+                <p> {{project.description}}</p>
+            </div>
+          </div>          
         </div>
-      </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About Me</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p> I am a Mathematical Engineering Student at the <a href="http://www.ing.puc.cl"> PUC School of Engineering in Chile </a>. I am passionate about studying, analyzing, developing, implementing and applying mathematical models, specially those related to natural phenomena.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p> Though this is my  main occupation, recently I started to introduce myself into web development, and hence this site.  Also I some times am a musician (flutist/pianist) :). If you want to know more about me, contact me using the links below.</a> </p>
+                </div>
+<!--                 <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> Download Theme
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p> Santiago, Chile</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="mailto:jdgalaz@uc.cl" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/105808777707105298949" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/jdgalazm" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jgalazm" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/jgalazm" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+<!--                     <div class="footer-col col-md-4">
+                        <h3>About Freelancer</h3>
+                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; jgalazm 2016
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- g.analytics -->
--    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
 
-      ga('create', 'UA-70366160-1', 'auto');
-      ga('send', 'pageview');
-    </script>      
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-    <script src="bower_components/angular/angular.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+
+    <script src="js/angular.min.js"></script>
     <script>
 
         var app = angular.module('jgalazmApp',[]);
         
         app.controller('myprojectsController', function() {
             var projects = {
-              flume :{
-                name : 'Flume',
-                home : 'flume.html',
-                thumbnail : 'img/thumbnail_swe1d2.png',
-                description : 'Create smooth and shock-waves with your mouse or touch-screen in this shallow water flume.'
-              },
               diffuse :{
                 name: 'Diffuse',
                 home: 'diffuse.html',
                 thumbnail: 'img/thumbnail_diffuse.png',
                 description: 'Diffuse the temperature in a thin metal layer, or pour a diffusive ink in water. In any case, it is the diffusion of some quantity in a homogeneous media.'
-              }
+              },
+              flume :{
+                name : 'Flume',
+                home : 'flume.html',
+                thumbnail : 'img/thumbnail_swe1d2.png',
+                description : 'Create smooth and shock-waves with your mouse or touch-screen in this shallow water flume.'
+              }              
             };
             this.projects = projects;
         });
 
     // </script>   
-  </body>
+
+</body>
 
 </html>

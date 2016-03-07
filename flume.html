@@ -62,6 +62,25 @@
 
       <!-- class="col-xs-12 col-sm-2" -->
     </div>
+
+    <!-- <div class="row row-content">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h1> Flume</h1>
+        <p class="col-xs-12 col-sm-8 col-sm-offset-1"> En este experimento intenté simular un canal de laboratorio donde uno pueda generar ondas y ver cómo se propagan a lo largo de él y cómo se reflejan. </p>
+      </div>
+    </div>
+    <div class="row row-content">
+      <div class="row row-content">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h1> Jupyter notebook </h1>
+          <p> This is the Jupyter Notebook I used to prototype this model. </p>
+
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="flume_ipynb.html"></iframe>
+          </div>           
+        </div>
+      </div>
+    </div>  -->   
   </div>
 
   <footer class="row-footer">
@@ -117,7 +136,7 @@
       $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
+            
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
