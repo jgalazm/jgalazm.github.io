@@ -10,10 +10,16 @@
   <title> Flume </title>
       
   <!-- Bootstrap -->
-  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" >
+  <!-- <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+
+  <!-- Custom CSS -->
+  <link href="css/freelancer.css" rel="stylesheet">  
   
   <!-- Font-awesome -->
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">  
   <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
 
   <!-- dat-gui -->
@@ -31,14 +37,60 @@
 </head>
 
 <body>
+<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">José Galaz Mora</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="index.html#about">About</a>
+                    </li>
+<!--                     <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
   <header class="jumbotron">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-8">
+        <div class="col-xs-8">
           <h1>Flume </h1>
           <p> Click and drag the water with your mouse.<br>
 
             Use the <a href="#controls"> controls</a> for additional interaction </p>
+        </div>
+
+        <div class="col-xs-4">
+
+          <i class="fa fa-github fa-5x"></i>
+          <br>
+
+          <a href="https://github.com/jgalazm"> 
+          See me on Github
+          <a>
         </div>
       </div>
     </div>
@@ -83,7 +135,7 @@
     </div>  -->   
   </div>
 
-  <footer class="row-footer">
+<!--   <footer class="row-footer">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-7 col-sm-offset-5" id="copyright">
@@ -95,8 +147,53 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
+  <footer class="text-center">
+      <div class="footer-above">
+          <div class="container">
+              <div class="row">
+                  <div class="footer-col col-md-4">
+                      <h3>Location</h3>
+                      <p> Santiago, Chile</p>
+                  </div>
+                  <div class="footer-col col-md-4">
+                      <h3>Around the Web</h3>
+                      <ul class="list-inline">
+                          <li>
+                              <a href="mailto:jdgalaz@uc.cl" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://plus.google.com/105808777707105298949" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://twitter.com/jdgalazm" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://www.linkedin.com/in/jgalazm" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://github.com/jgalazm" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+<!--                     <div class="footer-col col-md-4">
+                      <h3>About Freelancer</h3>
+                      <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                  </div> -->
+              </div>
+          </div>
+      </div>
+      <div class="footer-below">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      Copyright &copy; jgalazm 2016
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
 
   <!-- ==============Third party scripts ====================-->
   <!-- Jquery -->
