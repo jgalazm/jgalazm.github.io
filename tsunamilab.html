@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Tsunami (jgalazm) </title>		
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+
+	<script src="bower_components/three.js/three.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>		    
+
+	<script src="bower_components/dat-gui/build/dat.gui.min.js"></script>					
+	<script src="js/stats.js"></script>
+	<script src="https://rawgit.com/jgalazm/TsunamiExp/master/web/js/sphericalModel.js"></script>
+	<script src="https://rawgit.com/jgalazm/TsunamiExp/master/web/js/colormap.js"></script>
+	<script src="https://rawgit.com/jgalazm/TsunamiExp/master/web/js/ui.js"></script>
+	<script src="js/TrackballControls.js"></script>
+	<script src="js/orbitcontrols.js"></script>
+
+	<script>
+		var vshader = 'shaders/tsunamiLab/vshader.glsl';
+		var bFshader = 'shaders/tsunamiLab/batiFShader2.glsl';
+		var iFshader = 'shaders/tsunamiLab/sphericalInitFShader.glsl';
+		var mFshader = 'shaders/tsunamiLab/sphericalModelFShader.glsl';
+		var sFshader = 'shaders/tsunamiLab/screenFShader.glsl';		
+		$(function(){
+			init();
+		});
+	</script>		
+	<style>
+		body {
+			color: #cccccc;
+			font-family:Monospace;
+			font-size:13px;
+			text-align:center;
+
+			background-color: #050505;
+			margin: 0px;
+			overflow: hidden;
+		}
+
+		#time {
+			position: absolute;
+			top: 0px; width: 100%;
+			padding: 5px;
+		}
+		#menu-toggle{
+			position:absolute;
+			top: 0px; left:0%;
+			padding: 5px;
+		}
+		a {
+			color: #0080ff;
+		}
+/*		#controls{
+			position: absolute;
+			bottom: 10%;
+		}*/
+
+		#cbwater{
+		    position: fixed;
+		    bottom: 0%;
+		    left:  37%;				
+		}
+
+	</style>			
+</head>		
+
+<body>
+
+	<div id="wrapper">	
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Tsunami Lab
+                    </a>
+                </li>
+                <li>               
+                    <div id="controls">
+					</div>  
+                </li>
+                
+            </ul>
+        </div>	
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+						<div id="simulation" style='display:inline-block;'>
+							<canvas id="container" > Chrome please</canvas>
+						</div>
+						<br>
+						<canvas width="50" height="512" id="cbwater"></canvas>	
+						<h4 id="time"> Time: </h4>
+						
+						<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars"></i></a>
+
+						<!-- <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
+                        <i class="fa fa-bars"></i>
+                   		 </a>      -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+	</div>
+
+    <!-- jQuery -->
+    <!-- <script src="js/jquery.js"></script>-->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+</html>
+
