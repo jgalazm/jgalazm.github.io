@@ -212,15 +212,13 @@ void main()
 	float h_ijp = -(u_ijp.a*(zmax-zmin)+zmin);
 	float h_ijm = -(u_ijm.a*(zmax-zmin)+zmin);
 
-	//mass equation for cell ij
+	//mass equation
 	if (h_ij >gx){
 		u2_ij.r = u_ij.r -rx*(u_ij.g-u_imj.g) - ry*(u_ij.b - u_ijm.b);
 	}
 	else{
 		u2_ij.r = 0.0;
 	}
-
-	//mass equation for cell i+1,j
 	if (h_ipj >gx){
 
 		u2_ipj.r = u_ipj.r -rx*(u_ipj.g-u_ij.g)-ry*(u_ipj.b - u_ipjm.b);
@@ -228,8 +226,6 @@ void main()
 	else{
 		u2_ipj.r = 0.0;
 	}
-
-	//mass equation for cell i,j+1
 	if (h_ijp >gx){
 		
 		u2_ijp.r = u_ijp.r -rx*(u_ijp.g - u_imjp.g) -ry*(u_ijp.b - u_ij.b);
