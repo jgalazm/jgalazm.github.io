@@ -16,8 +16,8 @@
 	    <link href="css/freelancer.css" rel="stylesheet">  
 
 	    <!-- Font-awesome -->
-	    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  		<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">  
+	    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">  
 	    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
 
 	    <!-- dat-gui (css+js)-->
@@ -368,7 +368,7 @@
 	    <script src="js/bootstrap.min.js"></script>
 
 	    <!-- Plugin JavaScript -->
-	    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 	    <script src="js/classie.js"></script>
 	    <script src="js/cbpAnimatedHeader.js"></script>
 
@@ -383,14 +383,37 @@
 <!--===================My scripts======================== -->
 
 		<script type="text/javascript"
-	  	src="https://rawgit.com/jgalazm/chrome-exp/master/diffuse/js/model.js"></script>
+	  	src="https://rawgit.com/jgalazm/chrome-exp/master/diffuse/js/diffuse.js"></script>
 		<script>
-			var vshader = 'shaders/diffuse/vshader.glsl';
-			var iFshader = 'shaders/diffuse/initFShader.glsl';
-			var mFshader = 'shaders/diffuse/modelFShader.glsl';
-			var sFshader = 'shaders/diffuse/screenFShader.glsl';		
+			var c1,d1,shaders;
 			$(function(){
-				init();
+				c1 = document.getElementById( 'container' );
+				c1.width = $("#simulation").width();
+				c1.height = $("#simulation").height();
+				shaders = {
+					vshader: 'shaders/diffuse/vshader.glsl',
+					iFshader: 'shaders/diffuse/initFShader.glsl',
+					mFshader: 'shaders/diffuse/modelFShader.glsl',
+					sFshader: 'shaders/diffuse/screenFShader.glsl'
+				}
+				d1 = new Diffuse(c1,shaders);
+				d1.initDatguiControls(d1);
+				d1.start();
+				
+				var customContainer = document.getElementById('controls');
+	    		customContainer.appendChild(d1.datgui.domElement);
+	    		
+	    		$(window).resize(function() {
+					// d1.container.width = $("#simulation").width();
+					// d1.container.height = $("#simulation").height();
+					console.log($("#simulation").width());
+					console.log($("#simulation").width()*d1.height0/d1.width0);
+					console.log('--');
+					d1.changeViewSize(
+						$("#simulation").width(),
+						$("#simulation").width()*d1.height0/d1.width0
+					);
+				});
 			});
 		</script>
 
